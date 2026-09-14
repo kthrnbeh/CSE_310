@@ -1,0 +1,1 @@
+print("Hello,World! I am a Computer Science student and I will work hard to learn.")
