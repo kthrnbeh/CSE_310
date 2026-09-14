@@ -1,1 +1,3 @@
-print("Hello,World! I am a Computer Science student and I will work hard to learn.")
+# This is a Hello world program for python.
+print("Hello,World!");
+
