@@ -26,6 +26,10 @@ public class Practice {
         double d1 = 12E4d;
         System.out.println(f1);
         System.out.println(d1);
+        boolean isJavaFun=true;
+        boolean isFishTasty=false;
+        System.out.println(isJavaFun);
+        System.out.println(isFishTasty);
     }
 
 }
