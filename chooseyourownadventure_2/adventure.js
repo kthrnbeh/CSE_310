@@ -1,6 +1,16 @@
 const textElement = document.getElementById('text');
 const optionButtons = document.getElementById('options-buttons');
 let state = {};
+function showOption(option){
+    return option.requiredState == null || option.requiredState(state)
+}
+function selectOption(option) {
+    const nextTextNodeId = option.nextText
+    state = Object.assign(state,option.setState)
+    showTextNode(nextTextNodeId)
+
+ 
+}
 
 const textNodes = [
   {
@@ -17,6 +27,20 @@ const textNodes = [
   },
   {
     id: 2,
+    text: 'You venture forth in search of answers to where you are when you come across a merchant.',
+    options: [
+        {
+            text: 'Trade the goo for a shield',
+            requiredState:(currentState) => currentState.blueGoo,
+            setState:{blueGoo: false, sword:true},
+            nextText:3
+        },
+        {
+            text: 'Ignore the merchant',
+            nextText:3
+        }
+    ]
+
     
     
   },
@@ -55,12 +79,8 @@ function showTextNode(textNodeIndex) {
 }
   
 
-function showOption(option){
-    return true
-}
 
-function selectOption(option) {
- 
-}
+
+
 
 startGame();
