@@ -1,5 +1,5 @@
 const textElement = document.getElementById('text');
-const optionButtons = document.querySelectorAll('options-buttons');
+const optionButtons = document.getElementById('options-buttons');
 let state = {};
 function showOption(option){
     return option.requiredState == null || option.requiredState(state)
@@ -63,8 +63,8 @@ function startGame() {
 function showTextNode(textNodeIndex) {
     const textNode =textNodes.find(textNode=> textNode.id === textNodeIndex)
     textElement.innerText =textNode.text
-    while(optionButtonElement.firstChild){
-        optionButtonElement.removeChild(optionButtonsElement.firstChild)
+    while(optionButtons.firstChild){
+        optionButtons.removeChild(optionButtons.firstChild)
     }
     textNode.options.forEach(option=>{
         if(showOption(option)) {
@@ -72,7 +72,7 @@ function showTextNode(textNodeIndex) {
             button.innerText =option.text
             button.classList.add('btn')
             button.addEventListener('click', () => selectOption(option))
-            optionButtonElement.appendChild(button)
+            optionButtons.appendChild(button)
         }
 
     })
