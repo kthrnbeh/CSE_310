@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<!-- The html element contains the complete web page and sets the language to English. -->
+<html lang="en">
+<head>
+    <!-- Sets the character encoding so text displays correctly. -->
+    <meta charset="UTF-8">
+    <!-- Makes the page scale correctly on phones and other screen sizes. -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Text shown in the browser tab. -->
+    <title>My Web Page</title>
+    <!-- Connects this page to the external stylesheet. -->
+    <link rel="stylesheet" href="choose_adventure.css">
+    <!-- Loads the JavaScript after the HTML has been read. -->
+    <script src="choose_adventure.js" defer></script>
+</head>
+<body>
+    <!--Images for the characters-->
+    <img id="character-images" src="princess_knight_wizard.png" alt="Princess">
+    
+    <!-- The header displays the main title of the game. -->
+    <header>
+        <h1>Choose Your Adventure</h1>
+    </header>
+
+    <!-- The main element contains the primary game content. -->
+    <main>
+        <!-- This container groups the welcome message and game controls. -->
+        <div id="container">
+            <!-- Introductory heading for the game. -->
+            <h2>Welcome</h2>
+            <!-- JavaScript updates this heading with the current story text. -->
+            <h3 id="adventure-text">Choose your character:</h3>
+            <!-- JavaScript replaces the buttons in this container for each story choice. -->
+            <div id="character-buttons">
+                <!-- These initial buttons provide the starting character choices. -->
+                <button id="princess-button" type="button">Princess</button>
+                <button id="wizard-button" type="button">Wizard</button>
+                <button id="knight-button" type="button">Knight</button>
+            </div>
+        </div>
+    </main>
+
+    <!-- The footer displays copyright information. -->
+    <footer>
+        <p>&copy; 2026 My Web Page</p>
+    </footer>
+</body>
+</html>

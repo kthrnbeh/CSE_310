@@ -1,0 +1,59 @@
+/* Applies consistent sizing and font settings to every element. */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+/*images for the characters*/
+img {
+    width: 400px; /* Sets the width of the image. */
+    height: auto; /* Maintains the image's aspect ratio. */
+    margin-bottom: 20px; /* Adds space below the image. */
+}
+/* Styles the entire page and centers the game vertically and horizontally. */
+body {
+    background-color: #459eb1; /* Sets the page background color. */
+    margin: 0; /* Removes the browser's default outside spacing. */
+    padding: 0; /* Removes the browser's default inside spacing. */
+    display: flex; /* Enables flexible layout for the page. */
+    flex-direction: column; /* Places page sections from top to bottom. */
+    justify-content: center; /* Centers the content vertically. */
+    align-items: center; /* Centers the content horizontally. */
+    min-height: 100vh; /* Makes the page at least as tall as the viewport. */
+}
+
+/* Styles the card that contains the adventure game. */
+#container {
+    width: min(800px, 90%); /* Limits the width while allowing smaller screens. */
+    text-align: center; /* Centers the text inside the card. */
+    background-color: #f0f0f0; /* Gives the card a light background. */
+    padding: 2rem; /* Adds space between the content and card edges. */
+    border-radius: 5px; /* Rounds the card's corners. */
+    box-shadow: 0 0 10px 2px; /* Adds depth around the card. */
+}
+
+/* Arranges the story-choice buttons in a three-column grid. */
+#character-buttons {
+    display: grid; /* Enables grid layout for the buttons. */
+    grid-template-columns: repeat(3, 1fr); /* Creates three equal-width columns. */
+    gap: 10px; /* Adds space between buttons. */
+    margin-top: 20px; /* Separates the buttons from the story text. */
+}
+
+/* Styles all buttons inside the character-choice area. */
+#character-buttons button {
+    padding: 5px 10px; /* Adds space inside each button. */
+    font-size: 16px; /* Sets the button text size. */
+    cursor: pointer; /* Shows that the buttons can be clicked. */
+    border: none; /* Removes the default button border. */
+    border-radius: 5px; /* Rounds the button corners. */
+    background-color: #9b26af; /* Sets the normal button color. */
+    color: white; /* Makes the button text readable. */
+    outline: none; /* Removes the default focus outline. */
+}
+
+/* Changes the button color when the mouse pointer is over a button. */
+#character-buttons button:hover {
+    background-color: #0e0310;
+}
