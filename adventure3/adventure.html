@@ -1,30 +1,29 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <!-- The head contains page information and file links. -->
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Choose Your Own Adventure</title>
+    <!-- The title appears in the browser tab. -->
+    <title>Story Time with Kevin!!!</title>
 
-    <!-- Connect the HTML file to the CSS file. -->
-    <link rel="stylesheet" href="style.css">
-    <!-- Connect the HTML file to the JavaScript game logic. -->
-    <script src="script.js"defer></script>
+    <!-- Connect this page to the CSS file for styling. -->
+    <link rel="stylesheet" href="./style.css">
+
+    <!-- Connect this page to the JavaScript file for game behavior. -->
+    <script src="./script.js" defer></script>
 </head>
 <body>
-    <!-- This container holds the visible game layout. -->
-    <main class="adventure-container">
-        <!-- The game title is shown at the top of the page. -->
-        <h1>Choose Your Own Adventure</h1>
+    <!-- This div contains all of the visible story content. -->
+    <div id="content">
+        <!-- Main heading shown to the player. -->
+        <h1>Welcome To Story Time with Kevin</h1>
 
-        <!-- JavaScript will update this with the current story scene. -->
-        <p id="story">Your adventure begins here...</p>
+        <!-- This label asks the player for their name. -->
+        <label for="name-input">What is your name?</label>
 
-        <!-- JavaScript will add the choice buttons here. -->
-        <div id="choices" class="choices"></div>
-    </main>
+        <!-- The player types their name into this input box. -->
+        <input id="name-input" type="text">
 
-    
-    
+        <!-- Clicking this button begins the story. -->
+        <button id="start-button">Start the story!!</button>
+    </div>
 </body>
 </html>
