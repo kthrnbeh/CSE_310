@@ -1,5 +1,5 @@
 const textElement = document.getElementById('text');
-const optionButtons = document.getElementById('options-buttons');
+const optionButtons = document.querySelectorAll('options-buttons');
 let state = {};
 function showOption(option){
     return option.requiredState == null || option.requiredState(state)
