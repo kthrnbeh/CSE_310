@@ -1,3 +1,6 @@
+// This file controls the third choose-your-own-adventure game.
+// It waits for the player to enter a name, then displays story scenes and choices.
+
 // Store the complete story and the scene the player is currently viewing.
 var story;
 // This variable will later hold the story object returned by getStory().

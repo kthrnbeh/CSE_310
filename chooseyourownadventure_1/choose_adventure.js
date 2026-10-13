@@ -1,3 +1,6 @@
+// This file controls the first choose-your-own-adventure game.
+// It keeps the story in JavaScript and builds the choices on the page dynamically.
+
 // Finds the heading where the current story text will be displayed.
 const adventureText = document.querySelector("#adventure-text");
 
